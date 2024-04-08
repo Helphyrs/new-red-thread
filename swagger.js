@@ -14,6 +14,38 @@ const options = {
       }
     ],
     components: {
+      schemas: {
+        Product: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'integer',
+              description: 'ID unique du produit',
+            },
+            name: {
+              type: 'string',
+              description: 'Nom du produit',
+            },
+            price: {
+              type: 'number',
+              format: 'float',
+              description: 'Prix du produit',
+            },
+            status: {
+              type: 'string',
+              enum: ['vendu', 'invendu'],
+              description: 'Statut du produit (vendu ou invendu)',
+            },
+            userId: {
+              type: 'integer',
+              description: 'ID de l\'utilisateur associé au produit',
+            },
+          },
+          required: ['name', 'price', 'status', 'userId'],
+        }
+      }
+    },
+    components: {
       securitySchemes: {
         BearerAuth: {
           type: 'http',

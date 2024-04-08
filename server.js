@@ -1,5 +1,7 @@
 require('dotenv').config()
+
 const app = require('./app')
+const sequelize = require('./services/mysql')
 
 let port = process.env.APP_PORT || 3000
 
