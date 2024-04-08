@@ -1,2 +1,2 @@
 # new-red-thread
-Nodejs / Express / Sequelize / MongoDb
+Nodejs / Express / Sequelize / Mysql
